@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cloud-service-provider
+
+  cloud:
+    nacos:
+      server-addr: 124.222.122.96:8848
+
+
+
+server:
+  port: 8888

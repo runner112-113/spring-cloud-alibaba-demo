@@ -1,0 +1,12 @@
+dubbo:
+  application:
+    name: ${spring.application.name}
+
+  registry:
+    address: nacos://${spring.cloud.nacos.server-addr:127.0.0.1:8848}
+  protocol:
+    name: dubbo
+    port: -1
+#  consumer:
+#    validation: jvalidationNew
+
