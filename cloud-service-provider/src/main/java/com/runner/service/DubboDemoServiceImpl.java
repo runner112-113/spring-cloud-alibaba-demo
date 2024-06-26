@@ -5,7 +5,8 @@ import org.apache.dubbo.config.annotation.DubboService;
 
 @DubboService(version = "1.0.0", group = "dev", timeout = 3000)
 public class DubboDemoServiceImpl implements DubboDemoService {
-    @Override
+
+
     public String sayHello(String context) {
         return "HELLO " + context;
     }

@@ -10,3 +10,35 @@ dubbo:
 #  consumer:
 #    validation: jvalidationNew
 
+
+
+spring:
+  shardingsphere:
+    datasource:
+      names: ds0
+      ds0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.31.231.195:3306/casclient?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+        username: groupone
+        password: eK7xL8lY3eK9
+
+    rules:
+      sharding:
+        tables:
+          test:
+            actual-data-nodes: ds0.test_0$->{1..2}
+            tableStrategy:
+              standard:
+                sharding-algorithm-name: test_inline
+                sharding-column: id
+            key-generate-strategy:
+              column: id
+        sharding-algorithms:
+          test_inline:
+            type: inline
+            props:
+              algorithm-expression: test_0$->{id % 2 + 1}
+
+
+
