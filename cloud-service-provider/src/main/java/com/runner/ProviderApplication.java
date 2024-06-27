@@ -1,7 +1,6 @@
 package com.runner;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
-import org.apache.dubbo.config.spring.context.annotation.EnableDubboConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,12 +16,12 @@ import javax.sql.DataSource;
 @SpringBootApplication
 @EnableDubbo
 @EnableDiscoveryClient
-public class App {
+public class ProviderApplication {
     @Autowired
     DataSource dataSource;
 
     public static void main( String[] args ) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(App.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(ProviderApplication.class, args);
         DataSource source = applicationContext.getBean(DataSource.class);
         System.out.println(source);
     }
