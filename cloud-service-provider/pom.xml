@@ -50,10 +50,10 @@
       <artifactId>spring-cloud-starter-bootstrap</artifactId>
     </dependency>
 
-    <dependency>
+<!--    <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-    </dependency>
+    </dependency>-->
 
    <dependency>
       <groupId>com.alibaba.cloud</groupId>
@@ -81,11 +81,11 @@
       <version>3.0.9</version>
     </dependency>
 
-    <dependency>
+<!--    <dependency>
       <groupId>org.apache.dubbo</groupId>
       <artifactId>dubbo-registry-nacos</artifactId>
       <version>3.0.9</version>
-    </dependency>
+    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/org.apache.shardingsphere/shardingsphere-jdbc-core-spring-boot-starter -->
     <dependency>
