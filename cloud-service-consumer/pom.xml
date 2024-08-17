@@ -65,11 +65,11 @@
             <version>3.0.9</version>
         </dependency>
 
-        <dependency>
+<!--        <dependency>
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-registry-nacos</artifactId>
         <version>3.0.9</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>javax.validation</groupId>

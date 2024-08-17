@@ -17,7 +17,7 @@ import javax.sql.DataSource;
  */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, ShardingSphereAutoConfiguration.class})
 @EnableDubbo
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class ProviderApplication {
 /*    @Autowired
     DataSource dataSource;*/

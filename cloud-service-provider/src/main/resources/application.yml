@@ -4,6 +4,7 @@ dubbo:
 
   registry:
     address: nacos://${spring.cloud.nacos.server-addr:127.0.0.1:8848}
+    register-mode: instance
   protocol:
     name: dubbo
     port: -1
