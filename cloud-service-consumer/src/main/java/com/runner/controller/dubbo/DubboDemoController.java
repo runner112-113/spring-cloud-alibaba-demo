@@ -1,14 +1,14 @@
 package com.runner.controller.dubbo;
 
 import com.runner.interfaces.DemoService;
+import com.runner.interfaces.MyAgentIntercept;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
-
-@Component
+@RestController
+@MyAgentIntercept
 public class DubboDemoController {
 
     public DubboDemoController() {
@@ -21,7 +21,7 @@ public class DubboDemoController {
     @GetMapping("/dubbo")
     public String sayHello() {
 //        return demoService.sayHello("context");
-        System.out.println("hello ...");
-        return null;
+        System.out.println("hello dubbo");
+        return "hello dubbo";
     }
 }

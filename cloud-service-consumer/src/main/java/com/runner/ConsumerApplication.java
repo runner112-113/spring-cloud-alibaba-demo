@@ -16,11 +16,11 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
  * Hello world!
  *
  */
-//@SpringBootApplication(exclude = NacosServiceRegistryAutoConfiguration.class)
+@SpringBootApplication(exclude = NacosServiceRegistryAutoConfiguration.class)
 //@EnableDubbo
 //@EnableDiscoveryClient
 //@EnableLoadTimeWeaving
-@ComponentScan(basePackageClasses = ConsumerApplication.class)
+//@ComponentScan(basePackageClasses = ConsumerApplication.class)
 public class ConsumerApplication {
 
 
@@ -30,7 +30,9 @@ public class ConsumerApplication {
     }*/
     public static void main( String[] args ) {
 
+        SpringApplication.run(ConsumerApplication.class, args);
 
+/*
 
         AnnotationConfigWebApplicationContext context = new MyAnnotationConfigWebApplicationContext();
 //        context.addBeanFactoryPostProcessor(aspectJWeavingEnabler);
@@ -43,5 +45,6 @@ public class ConsumerApplication {
 
         DubboDemoController dubboDemoController = new DubboDemoController();
         dubboDemoController.sayHello();
+*/
     }
 }

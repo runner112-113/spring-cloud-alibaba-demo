@@ -13,6 +13,7 @@
     <module>cloud-service-provider</module>
     <module>cloud-service-consumer</module>
     <module>cloud-service-api</module>
+    <module>cloud-agent</module>
   </modules>
 
   <properties>
@@ -48,11 +49,11 @@
         <scope>import</scope>
       </dependency>
 
-      <dependency>
+<!--      <dependency>
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-bom</artifactId>
         <version>3.0.9</version>
-      </dependency>
+      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
