@@ -10,17 +10,20 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.context.weaving.AspectJWeavingEnabler;
+import org.springframework.instrument.classloading.LoadTimeWeaver;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 /**
  * Hello world!
  *
  */
-//@SpringBootApplication(exclude = NacosServiceRegistryAutoConfiguration.class)
+@SpringBootApplication(exclude = NacosServiceRegistryAutoConfiguration.class)
 //@EnableDubbo
 //@EnableDiscoveryClient
-//@EnableLoadTimeWeaving
-@ComponentScan(basePackageClasses = ConsumerApplication.class)
+@EnableLoadTimeWeaving
+@EnableWebSecurity
+//@ComponentScan(basePackageClasses = ConsumerApplication.class)
 public class ConsumerApplication {
 
 
@@ -30,16 +33,20 @@ public class ConsumerApplication {
     }*/
     public static void main( String[] args ) {
 
+/*        SpringApplication springApplication = new SpringApplication();
+        springApplication.*/
 
+        ConfigurableApplicationContext context = SpringApplication.run(ConsumerApplication.class, args);
 
-        AnnotationConfigWebApplicationContext context = new MyAnnotationConfigWebApplicationContext();
+//        AnnotationConfigWebApplicationContext context = new MyAnnotationConfigWebApplicationContext();
 //        context.addBeanFactoryPostProcessor(aspectJWeavingEnabler);
-        context.register(ConsumerApplication.class);
+//        context.register(ConsumerApplication.class);
 //        ConfigurableApplicationContext context = SpringApplication.run(new Class[]{AspectJWeavingEnabler.class,ConsumerApplication.class }, args);
-        context.refresh();
+//        context.refresh();
         DubboDemoController controller = context.getBean(DubboDemoController.class);
 //        DubboDemoController controller = new DubboDemoController();
         controller.sayHello();
+
 
         DubboDemoController dubboDemoController = new DubboDemoController();
         dubboDemoController.sayHello();

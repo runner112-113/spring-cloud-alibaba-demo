@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import javax.sql.DataSource;
 
@@ -17,6 +18,7 @@ import javax.sql.DataSource;
  */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, ShardingSphereAutoConfiguration.class})
 @EnableDubbo
+@EnableWebSecurity
 //@EnableDiscoveryClient
 public class ProviderApplication {
 /*    @Autowired

@@ -12,3 +12,8 @@
 #    validation: jvalidationNew
 
 
+logging:
+  level:
+    org.springframework.security: debug
+
+
