@@ -1,19 +1,28 @@
-#dubbo:
-#  application:
-#    name: ${spring.application.name}
-#
-#  registry:
-#    address: nacos://${spring.cloud.nacos.server-addr:127.0.0.1:8848}
-#  protocol:
-#    name: dubbo
-#    port: -1
+dubbo:
+  application:
+    name: ${spring.application.name}
+
+  registry:
+    address: nacos://${spring.cloud.nacos.server-addr:127.0.0.1:8848}
+#    register-mode: all
+  protocol:
+    name: dubbo
+    port: -1
 
 #  consumer:
 #    validation: jvalidationNew
 
-
 logging:
   level:
     org.springframework.security: debug
-
+    org:
+      springframework:
+        boot:
+          web:
+            embedded:
+              tomcat:
+                TomcatEmbeddedWebappClassLoader: DEBUG
+#spring:
+#  profiles:
+#    include: db
 

@@ -7,7 +7,6 @@ import org.springframework.security.authorization.AuthenticatedAuthorizationMana
 import org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.core.GrantedAuthorityDefaults;
-import org.springframework.security.web.PortResolverImpl;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 
@@ -46,4 +45,21 @@ public class SecurityConfig {
     private static String generateRole(String roleCode) {
         return AUTHORITY_PREFIX + roleCode;
     }
+
+
+
+/*    @Bean
+    @Primary
+    @ConfigurationProperties(prefix = "spring.datasource.db0")
+    public DataSource dataSource0() {
+        return DataSourceBuilder.create().type(DruidDataSource.class).build();
+//        return new HikariDataSource();
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix = "spring.datasource.db1")
+    public DataSource dataSource1() {
+        return DataSourceBuilder.create().type(DruidDataSource.class).build();
+//        return new HikariDataSource();
+    }*/
 }

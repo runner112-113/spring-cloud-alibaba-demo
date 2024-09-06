@@ -1,4 +1,3 @@
-
 /**
  * 归并排序
  *
@@ -8,6 +7,10 @@
  */
 public class Demo {
     public static void main(String[] args) {
+
+//        List<SQLStatement> sqlStatements = SQLUtils.parseStatements("Select id,name from t where id = 1 ", JdbcConstants.MYSQL);
+
+
         int[] arrays = new int[]{1,5,4,3,6,0,3,9,5,3,4};
         sort(arrays);
         for (int array : arrays) {
