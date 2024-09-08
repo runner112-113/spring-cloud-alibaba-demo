@@ -26,3 +26,21 @@ logging:
 #  profiles:
 #    include: db
 
+
+#Sentinel
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: http://127.0.0.1:8080
+      eager: true
+      web-context-unify: true
+      datasource:
+        d1:
+          nacos:
+            server-addr: ${spring.cloud.nacos.server-addr}
+
+
+
+
+

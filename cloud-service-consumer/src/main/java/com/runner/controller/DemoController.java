@@ -1,5 +1,6 @@
 package com.runner.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.runner.interfaces.DemoService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,8 @@ public class DemoController {
     DemoService demoService;
 
     @GetMapping("/demo")
-    @PreAuthorize("hasAnyRole('USER')")
+//    @PreAuthorize("hasAnyRole('USER')")
+    @SentinelResource("sayHello")
     public String sayHello() {
 //        return demoService.sayHello("context");
         System.out.println("hello ...");
