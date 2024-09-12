@@ -16,6 +16,8 @@
     <module>cloud-agent</module>
       <module>aspect-oriented-programming</module>
     <module>cloud-attach-agent</module>
+      <module>cloud-service-metrics</module>
+      <module>cloud-service-security</module>
   </modules>
 
   <properties>
