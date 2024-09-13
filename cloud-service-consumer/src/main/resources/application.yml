@@ -12,6 +12,7 @@ dubbo:
 #  consumer:
 #    validation: jvalidationNew
 
+#Loggiong
 logging:
   level:
     org.springframework.security: debug
@@ -22,13 +23,14 @@ logging:
             embedded:
               tomcat:
                 TomcatEmbeddedWebappClassLoader: DEBUG
-#spring:
-#  profiles:
-#    include: db
 
 
-#Sentinel
+
+
 spring:
+  profiles:
+    include: data
+#Sentinel
   cloud:
     sentinel:
       transport:

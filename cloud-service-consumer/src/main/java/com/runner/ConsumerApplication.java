@@ -1,27 +1,22 @@
 package com.runner;
 
 import com.alibaba.cloud.nacos.registry.NacosServiceRegistryAutoConfiguration;
-import com.runner.config.MyAnnotationConfigWebApplicationContext;
 import com.runner.controller.dubbo.DubboDemoController;
-import com.runner.entity.MyBean;
 import com.runner.mapper.CityMapper;
+import com.runner.pojo.MyBean;
+import com.runner.redis.annotations.EnableRedisMetrics;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.*;
-import org.springframework.context.weaving.AspectJWeavingEnabler;
-import org.springframework.instrument.classloading.LoadTimeWeaver;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 import javax.sql.DataSource;
 import java.util.Map;
@@ -36,6 +31,7 @@ import java.util.Map;
 //@EnableLoadTimeWeaving
 @EnableWebSecurity
 @EnableMethodSecurity
+@EnableRedisMetrics
 //@ComponentScan(basePackageClasses = ConsumerApplication.class)
 public class ConsumerApplication implements CommandLineRunner, BeanFactoryAware {
 
@@ -90,6 +86,8 @@ public class ConsumerApplication implements CommandLineRunner, BeanFactoryAware 
     public void run(String... args) throws Exception {
         beanFactory.getBean("cityMapper");
         beanFactory.getBean(BeanFactory.FACTORY_BEAN_PREFIX + "cityMapper");
+        RedisTemplate redisTemplate = beanFactory.getBean("redisTemplate", RedisTemplate.class);
+        redisTemplate.opsForValue().set("test", 1);
         System.out.println(this.cityMapper.findByState("CA"));
     }
 

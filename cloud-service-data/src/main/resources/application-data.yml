@@ -1,0 +1,26 @@
+#spring:
+#  datasource:
+#    db0:
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      jdbc-url: jdbc:mysql://
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      username: abc
+#      password: 123
+#    db1:
+#      jdbc-url: jdbc:mysql://111
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      username: abc111
+#      password: 123111
+#    url: jdbc:mysql://111
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: abc111
+#    password: 123111
+
+
+#Redis
+spring:
+  redis:
+    host: 172.31.231.225
+    port: 6379
+    password: lta4u8zVC2
+    database: 1

@@ -1,4 +1,4 @@
-package com.runner.entity;
+package com.runner.pojo;
 
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.beans.factory.annotation.Autowired;
