@@ -10,16 +10,18 @@
   <name>spring-cloud-alibaba-demo</name>
   <url>http://maven.apache.org</url>
   <modules>
-      <module>cloud-service-provider</module>
-      <module>cloud-service-consumer</module>
       <module>cloud-service-api</module>
-      <module>cloud-agent</module>
       <module>aspect-oriented-programming</module>
-      <module>cloud-attach-agent</module>
-      <module>cloud-service-metrics</module>
       <module>cloud-service-security</module>
       <module>cloud-service-data</module>
       <module>cloud-service-core</module>
+      <module>cloud-service-gateway</module>
+      <module>cloud-service-discovery</module>
+      <module>cloud-service-config</module>
+      <module>cloud-service-observability</module>
+      <module>cloud-service-application</module>
+      <module>cloud-service-agent</module>
+      <module>cloud-service-processor</module>
   </modules>
 
   <properties>

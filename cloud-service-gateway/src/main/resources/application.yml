@@ -1,0 +1,35 @@
+server:
+  port: 8787
+
+
+spring:
+  cloud:
+    gateway:
+      metrics:
+        enabled: true
+        tags:
+          path:
+            enabled: true
+      routes:
+        - id: cloud-service-consumer
+          predicates:
+            - Path=/consumer/**
+          uri: http://localhost:9999
+        - id: cloud-service-provider
+          predicates:
+            - Path=/provider/**
+          uri: http://localhost:8888
+          filters:
+            - AddRequestHeader=X-Request-red, blue
+      default-filters:
+        - AddRequestHeader=X-Request-red, blue
+
+
+#monitor
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  server:
+    port: 18888
