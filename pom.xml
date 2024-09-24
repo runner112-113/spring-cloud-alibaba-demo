@@ -20,7 +20,7 @@
       <module>cloud-service-observability</module>
       <module>cloud-service-application</module>
       <module>cloud-service-agent</module>
-      <module>cloud-service-processor</module>
+      <module>cloud-service-compiler</module>
   </modules>
 
   <properties>
