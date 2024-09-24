@@ -10,7 +10,6 @@
   <name>spring-cloud-alibaba-demo</name>
   <url>http://maven.apache.org</url>
   <modules>
-      <module>cloud-service-api</module>
       <module>aspect-oriented-programming</module>
       <module>cloud-service-security</module>
       <module>cloud-service-data</module>
@@ -29,6 +28,7 @@
     <spring-cloud-alibaba.version>2021.0.6.0</spring-cloud-alibaba.version>
     <spring-cloud.version>2021.0.5</spring-cloud.version>
     <spring-boot.version>2.6.13</spring-boot.version>
+      <dubbo.version>2.7.15</dubbo.version>
   </properties>
 
   <dependencyManagement>
@@ -56,6 +56,14 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-bom</artifactId>
+            <version>${dubbo.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
 
 <!--      <dependency>
         <groupId>org.apache.dubbo</groupId>

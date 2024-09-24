@@ -47,14 +47,14 @@ public class ConsumerApplication implements CommandLineRunner, BeanFactoryAware 
         springApplication.*/
 
         ConfigurableApplicationContext context = SpringApplication.run(ConsumerApplication.class, args);
-        ObjectPostProcessor objectPostProcessor = context.getBean(ObjectPostProcessor.class);
+/*        ObjectPostProcessor objectPostProcessor = context.getBean(ObjectPostProcessor.class);
 
         Map<String, DataSource> beansOfType = context.getBeansOfType(DataSource.class);
 
         MyBean myBean = new MyBean();
         objectPostProcessor.postProcess(myBean);
 
-        System.out.println(myBean.getAge());
+        System.out.println(myBean.getAge());*/
 
 
 
@@ -65,13 +65,13 @@ public class ConsumerApplication implements CommandLineRunner, BeanFactoryAware 
 //        context.register(ConsumerApplication.class);
 //        ConfigurableApplicationContext context = SpringApplication.run(new Class[]{AspectJWeavingEnabler.class,ConsumerApplication.class }, args);
 //        context.refresh();
-        DubboDemoController controller = context.getBean(DubboDemoController.class);
+/*        DubboDemoController controller = context.getBean(DubboDemoController.class);
 //        DubboDemoController controller = new DubboDemoController();
         controller.sayHello();
 
 
         DubboDemoController dubboDemoController = new DubboDemoController();
-        dubboDemoController.sayHello();
+        dubboDemoController.sayHello();*/
     }
 
 

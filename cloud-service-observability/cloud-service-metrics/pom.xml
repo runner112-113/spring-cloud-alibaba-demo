@@ -19,6 +19,12 @@
 
   <dependencies>
 
+    <dependency>
+      <groupId>com.runner</groupId>
+      <artifactId>cloud-service-api</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <!--        Monitor-->
     <dependency>
       <groupId>org.springframework.boot</groupId>

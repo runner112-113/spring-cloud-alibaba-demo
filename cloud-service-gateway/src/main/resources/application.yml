@@ -3,6 +3,14 @@ server:
 
 
 spring:
+  application:
+    name: cloud-service-gateway
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1
   cloud:
     gateway:
       metrics:

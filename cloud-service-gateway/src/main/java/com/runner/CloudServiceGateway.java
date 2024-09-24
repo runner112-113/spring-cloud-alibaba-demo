@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * gateway service
+ * TODO：gateway layer use dubbo transport instead of http
  *
  */
 @SpringBootApplication

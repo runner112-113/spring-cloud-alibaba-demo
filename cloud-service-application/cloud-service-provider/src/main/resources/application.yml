@@ -10,6 +10,8 @@ dubbo:
     port: -1
 #  consumer:
 #    validation: jvalidationNew
+  provider:
+    filter: tracing
 
 
 spring:
@@ -39,7 +41,33 @@ spring:
             type: inline
             props:
               algorithm-expression: test_0$->{id % 2 + 1}
+
+
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1
+
 server:
   port: 8888
+
+
+# zipkin图形展现地址和采样率设置
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0 #采样率默认为0.1(0.1就是10次只能有一次被记录下来)，值越大收集越及时。
+
+
+logging:
+  level:
+    org.springframework.web: debug
+
+
 
 
