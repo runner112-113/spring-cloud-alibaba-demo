@@ -12,7 +12,6 @@
   <modules>
       <module>aspect-oriented-programming</module>
       <module>cloud-service-security</module>
-      <module>cloud-service-data</module>
       <module>cloud-service-core</module>
       <module>cloud-service-gateway</module>
       <module>cloud-service-discovery</module>
@@ -21,6 +20,8 @@
       <module>cloud-service-application</module>
       <module>cloud-service-agent</module>
       <module>cloud-service-compiler</module>
+      <module>cloud-service-core/cloud-service-cache</module>
+      <module>cloud-service-core/cloud-service-common</module>
   </modules>
 
   <properties>
@@ -28,7 +29,8 @@
     <spring-cloud-alibaba.version>2021.0.6.0</spring-cloud-alibaba.version>
     <spring-cloud.version>2021.0.5</spring-cloud.version>
     <spring-boot.version>2.6.13</spring-boot.version>
-      <dubbo.version>2.7.15</dubbo.version>
+      <dubbo.version>2.7.13</dubbo.version>
+      <dubbo-spring-boot-starter.version>2.7.13</dubbo-spring-boot-starter.version>
   </properties>
 
   <dependencyManagement>
@@ -63,6 +65,12 @@
             <version>${dubbo.version}</version>
             <type>pom</type>
             <scope>import</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo-spring-boot-starter.version}</version>
         </dependency>
 
 <!--      <dependency>

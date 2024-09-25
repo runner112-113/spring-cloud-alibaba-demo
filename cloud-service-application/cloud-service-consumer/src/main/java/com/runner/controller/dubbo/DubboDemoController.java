@@ -3,6 +3,7 @@ package com.runner.controller.dubbo;
 import com.runner.interfaces.DemoService;
 import com.runner.interfaces.MyAgentIntercept;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

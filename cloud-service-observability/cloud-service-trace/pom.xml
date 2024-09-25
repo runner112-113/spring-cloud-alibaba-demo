@@ -19,26 +19,7 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>io.zipkin.brave</groupId>
-            <artifactId>brave-instrumentation-dubbo</artifactId>
-            <version>6.0.2</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>io.zipkin.brave</groupId>
-            <artifactId>brave-instrumentation-rpc</artifactId>
-            <version>6.0.2</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>io.zipkin.brave</groupId>
-            <artifactId>brave-instrumentation-spring-webmvc</artifactId>
-            <version>6.0.2</version>
-        </dependency>
-
+<!--
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-tracing</artifactId>
@@ -53,6 +34,7 @@
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-observation</artifactId>
         </dependency>
+-->
 
         <dependency>
             <groupId>io.zipkin.reporter2</groupId>
@@ -69,6 +51,25 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-instrumentation-dubbo</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-instrumentation-rpc</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-instrumentation-spring-webmvc</artifactId>
         </dependency>
 
         <dependency>
