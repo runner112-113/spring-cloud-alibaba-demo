@@ -8,10 +8,17 @@
     </parent>
 
     <artifactId>cloud-service-config</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>cloud-service-config</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>cloud-service-config-nacos</module>
+        <module>cloud-service-config-zookeeper</module>
+        <module>cloud-service-config-etcd</module>
+        <module>cloud-service-config-apollo</module>
+        <module>cloud-service-config-consoul</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

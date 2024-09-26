@@ -37,7 +37,7 @@
 
         <dependency>
             <groupId>com.runner</groupId>
-            <artifactId>cloud-service-trace</artifactId>
+            <artifactId>trace-spring-cloud-sleuth</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

@@ -14,6 +14,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>cloud-service-spring-cloud-security</module>
+        <module>cloud-service-apache-shiro</module>
     </modules>
 
     <properties>

@@ -22,6 +22,12 @@
       <module>cloud-service-compiler</module>
       <module>cloud-service-core/cloud-service-cache</module>
       <module>cloud-service-core/cloud-service-common</module>
+      <module>cloud-service-observability/cloud-service-trace/trace-spring-cloud-sleuth</module>
+      <module>cloud-service-rpc</module>
+      <module>cloud-service-discovery/cloud-service-nacos</module>
+      <module>cloud-service-discovery/cloud-service-eureka</module>
+      <module>cloud-service-discovery/cloud-service-zookeeper</module>
+      <module>cloud-service-discovery/cloud-service-consoul</module>
   </modules>
 
   <properties>
@@ -29,8 +35,6 @@
     <spring-cloud-alibaba.version>2021.0.6.0</spring-cloud-alibaba.version>
     <spring-cloud.version>2021.0.5</spring-cloud.version>
     <spring-boot.version>2.6.13</spring-boot.version>
-      <dubbo.version>2.7.13</dubbo.version>
-      <dubbo-spring-boot-starter.version>2.7.13</dubbo-spring-boot-starter.version>
   </properties>
 
   <dependencyManagement>
@@ -59,25 +63,6 @@
         <scope>import</scope>
       </dependency>
 
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-bom</artifactId>
-            <version>${dubbo.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>${dubbo-spring-boot-starter.version}</version>
-        </dependency>
-
-<!--      <dependency>
-        <groupId>org.apache.dubbo</groupId>
-        <artifactId>dubbo-bom</artifactId>
-        <version>3.0.9</version>
-      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
