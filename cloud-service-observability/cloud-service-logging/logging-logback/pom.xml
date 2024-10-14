@@ -3,25 +3,25 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.runner</groupId>
-        <artifactId>cloud-service-observability</artifactId>
+        <artifactId>cloud-service-logging</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-service-logging</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>logging-logback</artifactId>
+    <packaging>jar</packaging>
 
-    <name>cloud-service-logging</name>
+    <name>logging-logback</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>logging-logback</module>
-        <module>logging-log4j2</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+
+        <!-- spring-boot default log framework-->
+
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
