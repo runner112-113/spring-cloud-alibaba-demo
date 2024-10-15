@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <springProperty scope="CONTEXT" name="applicationName" source="spring.application.name" defaultValue="default-application" />
+
+    <property name="pattern-color" value="%green(%d{yyyy-MM-dd HH:mm:ss.SSS}) [%thread] %highlight(%-5level) %red(%logger{50}) - %msg %n"/>
+
+
+    <springProfile name="dev">
+        <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">　　　　　
+            <encoder>　　　　　　　　
+                <pattern>${pattern-color}</pattern>　　　
+            </encoder>　
+        </appender>
+        <root level="INFO">
+            <appender-ref ref="Console"/>
+        </root>
+    </springProfile>
+
+
+    <springProfile name="test">
+        <property name="logDir" value="D:\\logs\\test\\"/>
+        <appender name="InfoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>INFO</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <File>${logDir}/info.log</File>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${logDir}/info/info.%d{yyyy-MM-dd}-%i-log.zip</fileNamePattern>
+                <maxHistory>20</maxHistory>
+                <maxFileSize>300MB</maxFileSize>
+            </rollingPolicy>
+            <encoder>　　　　　　　　
+                <pattern>${pattern-color}</pattern>　　　
+            </encoder>　
+        </appender>
+
+        <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <File>${logDir}/error.log</File>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${logDir}/error/error.%d{yyyy-MM-dd}-%i-log.zip</fileNamePattern>
+                <maxHistory>20</maxHistory>
+                <maxFileSize>200MB</maxFileSize>
+            </rollingPolicy>
+            <encoder>　　　　　　　　
+                <pattern>%date [%thread] %-5level %logger{35} - %msg %n</pattern>　　　
+            </encoder>　
+        </appender>
+        <root level="INFO">
+            <appender-ref ref="InfoFile"/>
+            <appender-ref ref="ErrorFile"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="prod">
+        <property name="logDir" value="D:\\logs\\prod\\"/>
+        <appender name="InfoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>INFO</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <File>${logDir}/info.log</File>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${logDir}/info/info.%d{yyyy-MM-dd}-%i-log.zip</fileNamePattern>
+                <maxHistory>20</maxHistory>
+                <maxFileSize>300MB</maxFileSize>
+            </rollingPolicy>
+            <encoder>　　　　　　　　
+                <pattern>%date [%thread] %-5level %logger{35} - %msg %n</pattern>　　　
+            </encoder>　
+        </appender>
+
+        <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <File>${logDir}/error.log</File>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${logDir}/error/error.%d{yyyy-MM-dd}-%i-log.zip</fileNamePattern>
+                <maxHistory>20</maxHistory>
+                <maxFileSize>200MB</maxFileSize>
+            </rollingPolicy>
+            <encoder>　　　　　　　　
+                <pattern>%date [%thread] %-5level %logger{35} - %msg %n</pattern>　　　
+            </encoder>　
+        </appender>
+        <root level="INFO">
+            <appender-ref ref="InfoFile"/>
+            <appender-ref ref="ErrorFile"/>
+        </root>
+    </springProfile>
+
+
+</configuration>
