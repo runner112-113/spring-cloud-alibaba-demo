@@ -14,6 +14,8 @@
   <url>http://maven.apache.org</url>
     <modules>
         <module>metrics-micrometer</module>
+        <module>metrics-netflix-spectator</module>
+        <module>metrics-netflix-servo</module>
     </modules>
 
     <properties>
