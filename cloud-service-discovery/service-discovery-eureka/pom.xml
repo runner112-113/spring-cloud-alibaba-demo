@@ -8,10 +8,10 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>cloud-service-zookeeper</artifactId>
+  <artifactId>service-discovery-eureka</artifactId>
   <packaging>jar</packaging>
 
-  <name>cloud-service-zookeeper</name>
+  <name>cloud-service-eureka</name>
   <url>http://maven.apache.org</url>
 
   <properties>

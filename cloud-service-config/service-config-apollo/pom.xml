@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-service-config-zookeeper</artifactId>
+    <artifactId>service-config-apollo</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloud-service-config-zookeeper</name>
+    <name>cloud-service-config-apollo</name>
     <url>http://maven.apache.org</url>
 
     <properties>

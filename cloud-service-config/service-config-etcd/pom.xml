@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-service-config-consoul</artifactId>
+    <artifactId>service-config-etcd</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloud-service-config-consoul</name>
+    <name>cloud-service-config-etcd</name>
     <url>http://maven.apache.org</url>
 
     <properties>

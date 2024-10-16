@@ -8,10 +8,13 @@
     </parent>
 
     <artifactId>cloud-service-discovery</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>cloud-service-discovery</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>service-discovery-api</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -8,10 +8,10 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>cloud-service-eureka</artifactId>
+  <artifactId>service-discovery-nacos</artifactId>
   <packaging>jar</packaging>
 
-  <name>cloud-service-eureka</name>
+  <name>cloud-service-nacos</name>
   <url>http://maven.apache.org</url>
 
   <properties>

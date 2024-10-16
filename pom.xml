@@ -24,10 +24,10 @@
       <module>cloud-service-core/cloud-service-common</module>
       <module>cloud-service-observability/cloud-service-trace/trace-spring-cloud-sleuth</module>
       <module>cloud-service-rpc</module>
-      <module>cloud-service-discovery/cloud-service-nacos</module>
-      <module>cloud-service-discovery/cloud-service-eureka</module>
-      <module>cloud-service-discovery/cloud-service-zookeeper</module>
-      <module>cloud-service-discovery/cloud-service-consoul</module>
+      <module>cloud-service-discovery/service-discovery-nacos</module>
+      <module>cloud-service-discovery/service-discovery-eureka</module>
+      <module>cloud-service-discovery/service-discovery-zookeeper</module>
+      <module>cloud-service-discovery/service-discovery-consoul</module>
       <module>cloud-service-remoting</module>
   </modules>
 

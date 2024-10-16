@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.runner</groupId>
-        <artifactId>cloud-service-config</artifactId>
+        <artifactId>cloud-service-discovery</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-service-config-nacos</artifactId>
+    <artifactId>service-discovery-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloud-service-config-nacos</name>
+    <name>service-discovery-api</name>
     <url>http://maven.apache.org</url>
 
     <properties>

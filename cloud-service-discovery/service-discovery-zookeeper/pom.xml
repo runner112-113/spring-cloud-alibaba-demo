@@ -8,10 +8,10 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>cloud-service-nacos</artifactId>
+  <artifactId>service-discovery-zookeeper</artifactId>
   <packaging>jar</packaging>
 
-  <name>cloud-service-nacos</name>
+  <name>cloud-service-zookeeper</name>
   <url>http://maven.apache.org</url>
 
   <properties>
