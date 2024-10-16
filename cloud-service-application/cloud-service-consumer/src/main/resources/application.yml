@@ -29,6 +29,9 @@ logging:
 
 
 
+
+  file:
+    path: D:\\logs\\prod
 spring:
   profiles:
     include: data
@@ -75,6 +78,9 @@ management:
 #      percentiles: 0.5,0.75,0.95,0.99
 #      percentiles-histogram: true
 #      slo: 0.1,0.3,0.5,1,3
+
+
+
 
 
 
