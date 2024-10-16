@@ -27,16 +27,16 @@ public class LoggingController {
     LoggingSystem loggingSystem;
 
     @GetMapping
-    public boolean getLogInfos(LogLevel logLevel) {
+    public boolean getLogInfos(String logName, LogLevel logLevel) {
         // TODO  service discovery foreach?
 
         logger.debug(" ===> {}", "this is a debug log");
 
-        LoggerConfiguration loggerConfiguration = loggingSystem.getLoggerConfiguration(LoggingController.class.getName());
+        LoggerConfiguration loggerConfiguration = loggingSystem.getLoggerConfiguration(logName);
 
         logger.info(" ===> logger level is {}", loggerConfiguration.getEffectiveLevel());
 
-        loggingSystem.setLogLevel(LoggingController.class.getName(), logLevel);
+        loggingSystem.setLogLevel(logName, logLevel);
 
         return true;
 
