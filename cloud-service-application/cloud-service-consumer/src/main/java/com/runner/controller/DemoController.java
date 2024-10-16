@@ -6,6 +6,8 @@ import com.runner.interfaces.DemoService;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -19,6 +21,8 @@ import javax.annotation.Resource;
 @RestController
 @Component
 public class DemoController {
+
+    Logger logger = LoggerFactory.getLogger(DemoController.class);
 
     public DemoController() {
         System.out.println();
