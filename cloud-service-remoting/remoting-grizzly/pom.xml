@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.runner</groupId>
-        <artifactId>cloud-service-logging</artifactId>
+        <artifactId>cloud-service-remoting</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>logging-logback</artifactId>
+    <artifactId>remoting-grizzly</artifactId>
     <packaging>jar</packaging>
 
-    <name>logging-logback</name>
+    <name>remoting-grizzly</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -18,14 +18,6 @@
     </properties>
 
     <dependencies>
-
-        <!-- spring-boot default log framework-->
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-        </dependency>-->
-
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

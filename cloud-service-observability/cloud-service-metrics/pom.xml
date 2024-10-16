@@ -8,38 +8,19 @@
   </parent>
 
   <artifactId>cloud-service-metrics</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>cloud-service-metrics</name>
   <url>http://maven.apache.org</url>
+    <modules>
+        <module>metrics-micrometer</module>
+    </modules>
 
-  <properties>
+    <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
-
-    <dependency>
-      <groupId>com.runner</groupId>
-      <artifactId>cloud-service-api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <!--        Monitor-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-prometheus</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -48,16 +29,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>8</source>
-          <target>8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+
 </project>

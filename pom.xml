@@ -28,6 +28,7 @@
       <module>cloud-service-discovery/cloud-service-eureka</module>
       <module>cloud-service-discovery/cloud-service-zookeeper</module>
       <module>cloud-service-discovery/cloud-service-consoul</module>
+      <module>cloud-service-remoting</module>
   </modules>
 
   <properties>
