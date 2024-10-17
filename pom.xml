@@ -29,6 +29,7 @@
       <module>cloud-service-discovery/service-discovery-zookeeper</module>
       <module>cloud-service-discovery/service-discovery-consoul</module>
       <module>cloud-service-remoting</module>
+      <module>cloud-service-serialization</module>
   </modules>
 
   <properties>
