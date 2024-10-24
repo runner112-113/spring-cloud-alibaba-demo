@@ -12,12 +12,28 @@
 
     <name>cloud-service-serialization</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>serialization-api</module>
+        <module>serialization-hessian</module>
+        <module>serialization-jackson</module>
+    </modules>
 
     <description>serialization module</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hessian.version>4.0.63</hessian.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.caucho</groupId>
+                <artifactId>hessian</artifactId>
+                <version>${hessian.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>

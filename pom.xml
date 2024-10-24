@@ -30,6 +30,7 @@
       <module>cloud-service-discovery/service-discovery-consoul</module>
       <module>cloud-service-remoting</module>
       <module>cloud-service-serialization</module>
+      <module>cloud-service-flow-control</module>
   </modules>
 
   <properties>

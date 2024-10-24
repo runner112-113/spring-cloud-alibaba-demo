@@ -3,15 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.runner</groupId>
-        <artifactId>spring-cloud-alibaba-demo</artifactId>
+        <artifactId>cloud-service-serialization</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>cloud-service-common</artifactId>
+    <artifactId>serialization-hessian</artifactId>
     <packaging>jar</packaging>
 
-    <name>cloud-service-common</name>
+    <name>serialization-hessian</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -19,6 +18,23 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.runner</groupId>
+            <artifactId>serialization-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.runner</groupId>
+            <artifactId>cloud-service-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -32,8 +48,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>7</source>
-                    <target>7</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
