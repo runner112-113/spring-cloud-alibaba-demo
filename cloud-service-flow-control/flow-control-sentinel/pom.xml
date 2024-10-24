@@ -5,12 +5,13 @@
         <groupId>com.runner</groupId>
         <artifactId>spring-cloud-alibaba-demo</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>cloud-service-flow-control</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>flow-control-sentinel</artifactId>
+    <packaging>jar</packaging>
 
-    <name>cloud-service-flow-control</name>
+    <name>flow-control-sentinel</name>
     <url>http://maven.apache.org</url>
 
     <properties>

@@ -31,6 +31,8 @@
       <module>cloud-service-remoting</module>
       <module>cloud-service-serialization</module>
       <module>cloud-service-flow-control</module>
+      <module>cloud-service-flow-control/flow-control-resilience4j</module>
+      <module>cloud-service-flow-control/flow-control-sentinel</module>
   </modules>
 
   <properties>
