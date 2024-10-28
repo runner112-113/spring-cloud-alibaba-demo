@@ -33,6 +33,7 @@
       <module>cloud-service-flow-control</module>
       <module>cloud-service-flow-control/flow-control-resilience4j</module>
       <module>cloud-service-flow-control/flow-control-sentinel</module>
+      <module>cloud-service-core/cloud-service-distributed-lock</module>
   </modules>
 
   <properties>
