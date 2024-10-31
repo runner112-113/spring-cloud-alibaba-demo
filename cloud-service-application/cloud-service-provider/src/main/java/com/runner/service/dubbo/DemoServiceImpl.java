@@ -3,6 +3,7 @@ package com.runner.service.dubbo;
 import brave.Span;
 import brave.Tracing;
 import com.runner.interfaces.DemoService;
+import com.runner.processor.MyAnnotation;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.annotation.Method;
 import org.springframework.cloud.sleuth.brave.bridge.BraveCurrentTraceContext;
@@ -15,6 +16,7 @@ import java.util.concurrent.ForkJoinPool;
         methods = {
         @Method(name = "sayHello2",timeout = 4000)
 })
+@MyAnnotation(value = "xxx")
 public class DemoServiceImpl implements DemoService {
 
 

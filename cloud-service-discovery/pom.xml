@@ -14,6 +14,10 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>service-discovery-api</module>
+        <module>service-discovery-consoul</module>
+        <module>service-discovery-eureka</module>
+        <module>service-discovery-nacos</module>
+        <module>service-discovery-zookeeper</module>
     </modules>
 
     <properties>

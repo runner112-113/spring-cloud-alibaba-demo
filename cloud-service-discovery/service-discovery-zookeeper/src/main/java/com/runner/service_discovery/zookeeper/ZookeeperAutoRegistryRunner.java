@@ -1,9 +1,6 @@
 package com.runner.service_discovery.zookeeper;
 
-import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.x.discovery.ServiceDiscovery;
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,5 +64,9 @@ public class ZookeeperAutoRegistryRunner implements ApplicationRunner, SmartLife
 
     public boolean isRunning() {
         return running.get();
+    }
+
+    public int getPhase() {
+        return DEFAULT_PHASE;
     }
 }

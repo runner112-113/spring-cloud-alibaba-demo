@@ -10,7 +10,7 @@
   <name>spring-cloud-alibaba-demo</name>
   <url>http://maven.apache.org</url>
   <modules>
-      <module>aspect-oriented-programming</module>
+<!--      <module>aspect-oriented-programming</module>-->
       <module>cloud-service-security</module>
       <module>cloud-service-core</module>
       <module>cloud-service-gateway</module>
@@ -20,20 +20,10 @@
       <module>cloud-service-application</module>
       <module>cloud-service-agent</module>
       <module>cloud-service-compiler</module>
-      <module>cloud-service-core/cloud-service-cache</module>
-      <module>cloud-service-core/cloud-service-common</module>
-      <module>cloud-service-observability/cloud-service-trace/trace-spring-cloud-sleuth</module>
       <module>cloud-service-rpc</module>
-      <module>cloud-service-discovery/service-discovery-nacos</module>
-      <module>cloud-service-discovery/service-discovery-eureka</module>
-      <module>cloud-service-discovery/service-discovery-zookeeper</module>
-      <module>cloud-service-discovery/service-discovery-consoul</module>
       <module>cloud-service-remoting</module>
       <module>cloud-service-serialization</module>
       <module>cloud-service-flow-control</module>
-      <module>cloud-service-flow-control/flow-control-resilience4j</module>
-      <module>cloud-service-flow-control/flow-control-sentinel</module>
-      <module>cloud-service-core/cloud-service-distributed-lock</module>
   </modules>
 
   <properties>
