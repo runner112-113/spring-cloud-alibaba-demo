@@ -14,7 +14,7 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>cloud-service-processor</module>
+        <module>cloud-service-annotation-processor</module>
     </modules>
 
     <properties>

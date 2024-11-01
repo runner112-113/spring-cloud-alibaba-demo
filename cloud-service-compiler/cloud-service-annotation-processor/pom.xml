@@ -7,7 +7,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-service-processor</artifactId>
+    <artifactId>cloud-service-annotation-processor</artifactId>
     <packaging>jar</packaging>
 
     <name>cloud-service-processor</name>
