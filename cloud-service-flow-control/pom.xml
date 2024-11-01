@@ -13,6 +13,11 @@
     <name>cloud-service-flow-control</name>
     <url>http://maven.apache.org</url>
 
+    <modules>
+        <module>flow-control-resilience4j</module>
+        <module>flow-control-sentinel</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
