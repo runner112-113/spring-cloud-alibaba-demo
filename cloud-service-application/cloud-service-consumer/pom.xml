@@ -51,8 +51,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <groupId>com.runner</groupId>
+            <artifactId>flow-control-sentinel</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!--    <dependency>
@@ -126,8 +127,9 @@
 
 
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <groupId>com.runner</groupId>
+            <artifactId>flow-control-sentinel</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
