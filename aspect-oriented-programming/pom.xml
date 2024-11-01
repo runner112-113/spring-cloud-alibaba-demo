@@ -40,7 +40,7 @@
     </dependencies>
 
 
-    <build>
+<!--    <build>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -65,5 +65,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>

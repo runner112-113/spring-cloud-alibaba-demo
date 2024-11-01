@@ -10,7 +10,7 @@
   <name>spring-cloud-alibaba-demo</name>
   <url>http://maven.apache.org</url>
   <modules>
-<!--      <module>aspect-oriented-programming</module>-->
+      <module>aspect-oriented-programming</module>
       <module>cloud-service-security</module>
       <module>cloud-service-core</module>
       <module>cloud-service-gateway</module>

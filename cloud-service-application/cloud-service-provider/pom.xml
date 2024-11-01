@@ -145,7 +145,16 @@
       </dependency>
 
 
-    <dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina-ha -->
+      <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>tomcat-catalina-ha</artifactId>
+          <version>9.0.68</version>
+      </dependency>
+
+
+      <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13</version>
