@@ -25,6 +25,7 @@
       <module>cloud-service-serialization</module>
       <module>cloud-service-flow-control</module>
       <module>cloud-service-datasource</module>
+      <module>cloud-service-distributed-tx</module>
   </modules>
 
   <properties>
