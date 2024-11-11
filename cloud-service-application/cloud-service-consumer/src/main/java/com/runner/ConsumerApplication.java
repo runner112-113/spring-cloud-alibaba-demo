@@ -1,10 +1,8 @@
 package com.runner;
 
 import com.alibaba.cloud.nacos.registry.NacosServiceRegistryAutoConfiguration;
-import com.runner.controller.dubbo.DubboDemoController;
-import com.runner.mapper.CityMapper;
-import com.runner.pojo.MyBean;
-import com.runner.redis.annotations.EnableRedisMetrics;
+import com.runner.datasource.mysql.mapper.CityMapper;
+import com.runner.datasource.redis.annotations.EnableRedisMetrics;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;

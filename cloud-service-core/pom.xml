@@ -16,7 +16,6 @@
         <module>cloud-service-bytecode</module>
         <module>cloud-service-cache</module>
         <module>cloud-service-common</module>
-        <module>cloud-service-data</module>
         <module>cloud-service-distributed-lock</module>
     </modules>
 

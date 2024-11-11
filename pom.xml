@@ -24,6 +24,7 @@
       <module>cloud-service-remoting</module>
       <module>cloud-service-serialization</module>
       <module>cloud-service-flow-control</module>
+      <module>cloud-service-datasource</module>
   </modules>
 
   <properties>

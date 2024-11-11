@@ -14,7 +14,8 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>serialization-api</module>
-<!--        <module>serialization-hessian</module>-->
+        <module>serialization-all</module>
+        <!--        <module>serialization-hessian</module>-->
 <!--        <module>serialization-jackson</module>-->
     </modules>
 

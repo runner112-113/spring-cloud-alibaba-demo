@@ -41,6 +41,21 @@
         </encoder>　
     </appender>
 
+<!--    async write log-->
+    <appender name = "asyncErrorAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>1024</queueSize>
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="ErrorFile"/>
+    </appender>
+
+    <appender name = "asyncInfoAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>1024</queueSize>
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="InfoFile"/>
+    </appender>
+
 
     <springProfile name="dev">
         <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">　　　　　
