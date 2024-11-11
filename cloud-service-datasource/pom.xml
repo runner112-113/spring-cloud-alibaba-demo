@@ -21,6 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mybatis-spring-boot-starter.version>2.2.2</mybatis-spring-boot-starter.version>
+        <rocksdb.version>8.8.1</rocksdb.version>
     </properties>
 
     <dependencyManagement>
@@ -29,6 +30,12 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.rocksdb</groupId>
+                <artifactId>rocksdbjni</artifactId>
+                <version>${rocksdb.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
