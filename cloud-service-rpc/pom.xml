@@ -16,6 +16,7 @@
         <module>cloud-service-apache-dubbo</module>
         <module>cloud-service-sofa</module>
         <module>cloud-service-openfeign</module>
+        <module>cloud-service-grpc</module>
     </modules>
 
     <properties>
