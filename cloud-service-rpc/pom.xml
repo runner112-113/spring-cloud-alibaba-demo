@@ -23,11 +23,29 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dubbo.version>2.7.13</dubbo.version>
         <dubbo-spring-boot-starter.version>2.7.13</dubbo-spring-boot-starter.version>
+        <grpc.version>1.55.1</grpc.version>
+        <protobuf-java.version>3.22.2</protobuf-java.version>
+<!--        protocol buffer compiler-->
+        <protoc.version>3.22.2</protoc.version>
     </properties>
 
 
 <dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-bom</artifactId>
+            <version>${grpc.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf-java.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-bom</artifactId>

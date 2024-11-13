@@ -27,6 +27,7 @@
       <module>cloud-service-datasource</module>
       <module>cloud-service-distributed-tx</module>
       <module>cloud-service-consensus</module>
+      <module>cloud-service-dependencies-bom</module>
   </modules>
 
   <properties>
@@ -75,11 +76,11 @@
     </dependency>-->
 
 
-    <dependency>
+<!--    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
   </dependencies>
 </project>
