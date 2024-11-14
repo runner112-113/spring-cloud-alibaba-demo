@@ -20,13 +20,14 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-all</artifactId>
+            <groupId>com.runner</groupId>
+            <artifactId>serialization-protobuf</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-all</artifactId>
         </dependency>
 
         <dependency>
