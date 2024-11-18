@@ -1,6 +1,5 @@
 package com.runner.distributed.lock;
 
-import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -12,11 +11,11 @@ import java.util.concurrent.TimeUnit;
  */
 public interface DistributedLock {
 
-    void lock() throws SQLException;
+    void lock() throws Exception;
 
-    void lock(long holdTime, TimeUnit timeUnit);
+    void lock(long holdTime, TimeUnit timeUnit) throws Exception;
 
-    void unlock();
+    void unlock() throws Exception;
 
     boolean tryLock();
 

@@ -25,7 +25,7 @@ public class MysqlDistributedLock implements DistributedLock{
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public void lock() throws SQLException {
+    public void lock() {
         Connection connection = null;
         Boolean autoCommit = null;
         PreparedStatement preparedStatement = null;
