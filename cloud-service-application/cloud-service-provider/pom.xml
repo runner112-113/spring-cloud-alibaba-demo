@@ -155,6 +155,12 @@
 
 
       <dependency>
+          <groupId>com.runner</groupId>
+          <artifactId>flow-control-sentinel</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13</version>
