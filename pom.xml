@@ -28,7 +28,7 @@
       <module>cloud-service-distributed-tx</module>
       <module>cloud-service-consensus</module>
       <module>cloud-service-dependencies-bom</module>
-      <module>cloud-service-ai</module>
+<!--      <module>cloud-service-ai</module>-->
   </modules>
 
 
@@ -55,7 +55,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-cloud-alibaba.version>2021.0.6.0</spring-cloud-alibaba.version>
     <spring-cloud.version>2021.0.5</spring-cloud.version>
-    <spring-boot.version>2.6.13</spring-boot.version>
+    <spring-boot.version>3.2.6</spring-boot.version>
+<!--    <spring-boot.version>2.6.13</spring-boot.version>-->
   </properties>
 
   <dependencyManagement>
