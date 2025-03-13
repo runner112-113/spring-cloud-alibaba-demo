@@ -28,7 +28,28 @@
       <module>cloud-service-distributed-tx</module>
       <module>cloud-service-consensus</module>
       <module>cloud-service-dependencies-bom</module>
+      <module>cloud-service-ai</module>
   </modules>
+
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -63,10 +84,24 @@
         <scope>import</scope>
       </dependency>
 
+    <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-bom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
+
+
+
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-test</artifactId>
+      </dependency>
 <!--    <dependency>
       <groupId>com.sun</groupId>
       <artifactId>tools</artifactId>

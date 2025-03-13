@@ -49,7 +49,7 @@ public class DemoController {
         Counter.builder("demo-count").tag("tag--sayHello","test").register(meterRegistry).increment();
 //        return demoService.sayHello("context");
 
-        redisTemplate.opsForValue().set("test", 1);
+//        redisTemplate.opsForValue().set("test", 1);
         System.out.println("hello ...");
         return null;
     }

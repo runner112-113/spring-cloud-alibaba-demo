@@ -52,11 +52,27 @@ public class MeterAspect {
                 .tags("mbean", "osbean") // optional
                 .register(meterRegistry);
 
+        // SLOs适用于需要灵活查询任意百分位数的情况，而publishPercentiles适用于需要快速访问固定百分位数的场景
+        // 1.配置 serviceLevelObjectives(100ms, 500ms, 1000ms) 会生成以下桶：[0ms, 100ms)、[100ms, 500ms)、[500ms, 1000ms)、[1000ms, +∞)。
 
-        Timer timer = Timer.builder("http_requests")
+        Timer timer = Timer.builder("http_requests_time")
                 .tag("method_name", pjp.getSignature().getName())
                 .description("HTTP请求的响应时间")
-                // 启用百分位数统计
+                .publishPercentileHistogram(true)
+                .serviceLevelObjectives(
+                        Duration.ofMillis(100),
+                        Duration.ofMillis(300),
+                        Duration.ofMillis(500),
+                        Duration.ofMillis(800),
+                        Duration.ofSeconds(1),
+                        Duration.ofSeconds(3)
+                ).register(meterRegistry);
+
+
+        Timer timer2 = Timer.builder("http_requests")
+                .tag("method_name", pjp.getSignature().getName())
+                .description("HTTP请求的响应时间")
+                // 启用百分位数统计 - 让Micrometer在客户端（应用内）预先计算指定的百分位数，比如P50、P90、P99，并将这些计算结果直接发布到监控系统中
                 .publishPercentiles(0.5, 0.75, 0.95, 0.99)
                 // 启用基于直方图的百分位数
                 .publishPercentileHistogram(true)

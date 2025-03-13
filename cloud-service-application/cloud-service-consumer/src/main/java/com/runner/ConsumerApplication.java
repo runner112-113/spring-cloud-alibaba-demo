@@ -24,14 +24,14 @@ import java.util.Map;
  *
  */
 @SpringBootApplication(exclude = NacosServiceRegistryAutoConfiguration.class)
-@EnableDubbo
+//@EnableDubbo
 //@EnableDiscoveryClient
 //@EnableLoadTimeWeaving
 @EnableWebSecurity
 @EnableMethodSecurity
 @EnableRedisMetrics
 //@ComponentScan(basePackageClasses = ConsumerApplication.class)
-public class ConsumerApplication implements CommandLineRunner, BeanFactoryAware {
+public class ConsumerApplication implements /*CommandLineRunner,*/ BeanFactoryAware {
 
 
 
@@ -80,7 +80,7 @@ public class ConsumerApplication implements CommandLineRunner, BeanFactoryAware 
         this.cityMapper = cityMapper;
     }
 
-    @Override
+//    @Override
     public void run(String... args) throws Exception {
         beanFactory.getBean("cityMapper");
         beanFactory.getBean(BeanFactory.FACTORY_BEAN_PREFIX + "cityMapper");

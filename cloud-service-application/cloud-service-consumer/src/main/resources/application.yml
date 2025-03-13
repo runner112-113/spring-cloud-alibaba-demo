@@ -47,14 +47,14 @@ spring:
           nacos:
             server-addr: ${spring.cloud.nacos.server-addr}
 
-  zipkin:
-    base-url:  http://localhost:9411
-    enabled: true
-    sender:
-      type: web
-  sleuth:
-    sampler:
-      probability: 1
+#  zipkin:
+#    base-url:  http://localhost:9411
+#    enabled: true
+#    sender:
+#      type: web
+#  sleuth:
+#    sampler:
+#      probability: 1
 
 
 
