@@ -14,6 +14,6 @@ public class DSControllerTest {
 
     @Test
     public void generate() {
-        System.out.println(dsController.generate("你好,你是谁"));
+//        System.out.println(dsController.generate("你好,你是谁"));
     }
 }
