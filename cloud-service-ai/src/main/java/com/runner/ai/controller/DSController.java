@@ -1,8 +1,7 @@
 package com.runner.ai.controller;
 
-import com.runner.ai.tools.DateTimeTools;
+import com.runner.ai.vector.handle.RedisVectorDao;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,22 +21,26 @@ import java.util.Map;
 @RequestMapping("/ds")
 public class DSController {
 
-    private final OpenAiChatModel chatModel;
+//    private final OpenAiChatModel chatModel;
+
+    private final RedisVectorDao redisVectorDao;
 
     private final ChatClient chatClient;
 
-    public DSController(OpenAiChatModel chatModel, ChatClient chatClient) {
-        this.chatModel = chatModel;
+    public DSController(RedisVectorDao redisVectorDao, ChatClient chatClient) {
+        this.redisVectorDao = redisVectorDao;
+//        this.chatModel = chatModel;
         this.chatClient = chatClient;
     }
 
     @GetMapping("/ai/generate")
     public Map<String, String> generate(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message, String voice) {
+        redisVectorDao.embed();
         chatClient.prompt().system(sp -> sp.param("voice", voice))
                 .user(message)
                 .call().content();
         Map<String, String> map = new HashMap<>();
-        ChatClient chatClient = ChatClient.builder(chatModel).defaultTools(new DateTimeTools()).build();
+//        ChatClient chatClient = ChatClient.builder(chatModel).defaultTools(new DateTimeTools()).build();
 
 //        map.put("generation", this.chatModel.call(message));
         map.put("generation", chatClient.prompt(message).call().content());
