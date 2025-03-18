@@ -1,21 +1,22 @@
 spring:
   data:
     redis:
-      url: redis://lta4u8zVC2@172.31.231.225:6379
+      url: redis://172.31.227.196:6379
   ai:
     vectorstore:
       redis:
         index: my-index
+        initialize-schema: true
     zhipuai:
       api-key: 5a19bdc38e6642a9a8f3d589b33961da.fsSmsqz4iphFBUzC
-#    openai:
-#      embedding:
-#        enabled: false
-#      api-key: sk-ae06407313154aaea901810d0211ca0a
-#      chat:
-#        options:
-#          model: deepseek-chat
-#          temperature: 0.7
-#      base-url: https://api.deepseek.com
+    openai:
+      embedding:
+        enabled: false
+      api-key: sk-ae06407313154aaea901810d0211ca0a
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 0.7
+      base-url: https://api.deepseek.com
 
 
