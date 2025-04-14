@@ -28,7 +28,8 @@
       <module>cloud-service-distributed-tx</module>
       <module>cloud-service-consensus</module>
       <module>cloud-service-dependencies-bom</module>
-<!--      <module>cloud-service-ai</module>-->
+      <module>cloud-service-search</module>
+      <!--      <module>cloud-service-ai</module>-->
   </modules>
 
 
