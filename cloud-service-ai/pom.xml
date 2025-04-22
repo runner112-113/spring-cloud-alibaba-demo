@@ -86,7 +86,7 @@
             <artifactId>spring-ai-pdf-document-reader</artifactId>
         </dependency>
 <!--        mcp-->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-mcp-client-spring-boot-starter</artifactId>
         </dependency>
@@ -104,7 +104,7 @@
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-redis-store-spring-boot-starter</artifactId>
-        </dependency>
+        </dependency>-->
 
 
         <dependency>
